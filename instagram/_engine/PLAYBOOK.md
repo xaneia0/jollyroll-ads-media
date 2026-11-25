@@ -21,3 +21,12 @@ Her hafta 7 gönderi üretilir, her güne bir tane, saat 10:00'da (Metricool'un 
 - Her açıklama: kanca cümle + 1–2 cümle açıklama + etkileşim sorusu (yorum/etiket) + 4–6 hashtag (#jollyroll dahil). 300 karakter civarı.
 - Kullanıcı tercihi (25 Kas 2026): içeriğin çoğu MEME olsun. Haftalık karışım: 4–5 meme, 1 bilgi/özellik (tek seferlik mod, Günlük Eğlence, yeni dil vb.), 1 sezon/güncel. Meme formatları make_posts.py'de hazır: `kimse` (Kimse: / X:), `chat` (grup ya da sevgili sohbeti; en fazla 5 mesaj, kısa), `plan` (Plan / Gerçek ya da İlk 10 dakika / 2 saat sonra), `pov`, `tweet` (@jollyrollapp kartı). Bilinen meme görselleri, ünlü yüzleri, dizi/film karelerini KULLANMA; hepsi özgün metin tabanlı olsun. Görsellerde emoji kullanma (font yok), emoji sadece açıklamada.
 - CTA'lar: "Linki biyoda", "Arkadaşını etiketle", "Sevgilini etiketle", "Yoruma 1, 2 ya da 3".
+
+## Reels
+- Kullanıcı tercihi: aralara video sıkıştır. Her 20 günlük planda yaklaşık 4–5 Reel (her 3 günde bir).
+- Üretici: `instagram/_engine/make_reels.py <reels.json> <out>` (1080x1920, 30fps, ffmpeg gerekir). Tipler: `chat` (mesajlar tek tek düşer), `bomb` (Saatli Bomba geri sayım + BOOM), `pov` (satırlar sırayla). Örnek: `reels2.json`. Ses: kendi ürettiği tık/pop/boom efektleri (telifli müzik yok).
+- Marka barı sadece son karede; içerik kareleri Instagram arayüzünün altına girmesin.
+- Metricool: instagramData.type REEL, `videoCoverMilliseconds` ile dolu bir kareyi kapak yap. Medya linkini commit SHA'lı raw URL ile ver (aynı isimli dosya güncellenince önbellek sorunu olmasın).
+
+## Döngü
+- Kullanıcı 25 Kas 2026'da 20 günlük toplu planlama istedi: her ~20 günde bir oturumda bir sonraki 20 günü üret ve planla. Son planlı gün: 15 Aralık 2026.

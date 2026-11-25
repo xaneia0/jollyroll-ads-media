@@ -57,7 +57,7 @@ def brand(cta):
 
 def render_card(p):
     a = ACC[p["accent"]]
-    body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p><h1>{p["title"]}</h1>'''
+    body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p><h1>{p.get("title","")}</h1>'''
     if p.get("sub"): body += f'<p class="sub">{p["sub"]}</p>'
     if p["layout"] == "card":
         b1 = ACC[p.get("back1", "sage")]; b2 = ACC[p.get("back2", "lilac")]
@@ -70,6 +70,40 @@ def render_card(p):
         rows = "".join(f'<div class="row"><div class="dot" style="background:{ACC[c]}">{i+1}</div><div class="rt">{t}<small>{s}</small></div></div>'
                        for i, (t, s, c) in enumerate(p["rows"]))
         body += f'<div class="list{" compact" if len(p["rows"])>=5 else ""}">{rows}</div>'
+    elif p["layout"] == "kimse":
+        # "Kimse: / X: ..." meme
+        body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p>
+        <div style="margin-top:70px;font-size:54px;font-weight:700;color:#BFAE98">Kimse:</div>
+        <div style="margin-top:26px;font-size:54px;font-weight:700;color:#5E5046">...</div>
+        <div style="margin-top:60px;font-size:54px;font-weight:800">{p["who"]}</div>
+        <div style="margin-top:30px;font-family:Fraunces,serif;font-weight:900;font-size:84px;line-height:1.08;color:{a}">{p["line"]}</div>'''
+    elif p["layout"] == "chat":
+        bub = ""
+        for name, msg, side, c in p["msgs"]:
+            me = side == "r"
+            bub += (f'<div style="display:flex;flex-direction:column;align-items:{"flex-end" if me else "flex-start"};margin-top:16px">'
+                    + ("" if me else f'<span style="font-size:24px;font-weight:800;color:{ACC[c]};margin:0 0 6px 18px">{name}</span>')
+                    + f'<div style="max-width:720px;padding:20px 28px;border-radius:32px;{"border-bottom-right-radius:10px" if me else "border-bottom-left-radius:10px"};font-size:36px;font-weight:600;line-height:1.28;background:{"#F6EEDF" if me else "#2E241E"};color:{"#1F1712" if me else "#F6EEDF"};box-shadow:inset 0 0 0 {"0" if me else "2"}px #3E342D">{msg}</div></div>')
+        body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p><div style="margin-top:34px;background:#251C17;border-radius:44px;padding:30px 34px 38px;box-shadow:inset 0 0 0 2px #3A2E26">
+        <div style="display:flex;align-items:center;gap:18px;padding-bottom:14px;border-bottom:2px solid #3A2E26"><span style="width:58px;height:58px;border-radius:50%;background:{a}"></span><div><div style="font-size:32px;font-weight:800">{p["group"]}</div><div style="font-size:22px;color:#BFAE98">{p.get("members","4 kişi")}</div></div></div>{bub}
+        {f'<div style="text-align:right;margin-top:10px;font-size:22px;color:#BFAE98">{p["seen"]}</div>' if p.get("seen") else ""}</div>'''
+    elif p["layout"] == "plan":
+        b1, b2 = p["panels"]
+        body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p>
+        <div style="margin-top:44px;display:flex;flex-direction:column;gap:30px">
+        <div style="border-radius:44px;padding:44px 48px;background:#2A211C;box-shadow:inset 0 0 0 2px #3E342D"><div style="font-size:30px;font-weight:800;letter-spacing:4px;color:#BFAE98;text-transform:uppercase">{b1[0]}</div><div style="margin-top:16px;font-family:Fraunces,serif;font-weight:800;font-size:58px;line-height:1.15">{b1[1]}</div></div>
+        <div style="border-radius:44px;padding:44px 48px;background:{a};color:#1F1712;transform:rotate(-1.5deg)"><div style="font-size:30px;font-weight:800;letter-spacing:4px;text-transform:uppercase">{b2[0]}</div><div style="margin-top:16px;font-family:Fraunces,serif;font-weight:900;font-size:58px;line-height:1.15">{b2[1]}</div></div></div>'''
+    elif p["layout"] == "pov":
+        body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p>
+        <div style="margin-top:80px;font-family:Fraunces,serif;font-weight:900;font-size:190px;line-height:.9;color:{a}">POV:</div>
+        <div style="margin-top:46px;font-family:Fraunces,serif;font-weight:800;font-size:76px;line-height:1.12">{p["line"]}</div>
+        {f'<div class="sub" style="margin-top:40px">{p["sub"]}</div>' if p.get("sub") else ""}'''
+    elif p["layout"] == "tweet":
+        body = f'''<p class="kicker" style="color:{a}">{p["kicker"]}</p>
+        <div style="margin-top:90px;background:#F6EEDF;color:#1F1712;border-radius:44px;padding:52px 56px;box-shadow:0 30px 60px rgba(0,0,0,.45)">
+        <div style="display:flex;align-items:center;gap:22px"><div class="mark" style="background:#1F1712;color:#F6EEDF;width:84px;height:84px"><b>JOLLY</b>ROLL</div><div><div style="font-size:36px;font-weight:800">Jolly Roll</div><div style="font-size:28px;color:#7A6A5A">@jollyrollapp</div></div></div>
+        <div style="margin-top:38px;font-size:54px;font-weight:700;line-height:1.28">{p["line"]}</div>
+        <div style="margin-top:34px;font-size:26px;color:#7A6A5A">{p.get("meta","")}</div></div>'''
     elif p["layout"] == "big":
         body += f'<div style="margin-top:40px;display:flex;align-items:flex-end;gap:30px"><span class="big" style="color:{a}">{p["big"]}</span><span class="sub" style="margin:0 0 40px;font-size:40px">{p["bigtext"]}</span></div>'
         if p.get("rows"):

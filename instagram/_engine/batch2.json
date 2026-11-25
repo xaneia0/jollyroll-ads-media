@@ -1,0 +1,260 @@
+[
+ {
+  "id": "2026-12-03",
+  "accent": "sage",
+  "layout": "list",
+  "kicker": "Survivor modu",
+  "title": "3 can.<br><em style='color:#9DB08A'>Son kalan kazanır.</em>",
+  "sub": "Her yapamadığın görev bir can götürür. Masada en son kim ayakta kalacak?",
+  "rows": [
+   [
+    "Herkes 3 canla başlar",
+    "Görevi yapamayan bir can kaybeder",
+    "sage"
+   ],
+   [
+    "Canı biten oyundan çıkar",
+    "Ama yorum yapmaya devam eder",
+    "amber"
+   ],
+   [
+    "Son kalan kazanır",
+    "Gecenin şampiyonu belli olur",
+    "coral"
+   ]
+  ],
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-04",
+  "accent": "amber",
+  "layout": "list",
+  "kicker": "Cuma akşamı",
+  "title": "Evde mi<br><em style='color:#E8A63E'>takılıyoruz?</em>",
+  "sub": "Tek telefonla 3 oyunluk bir cuma gecesi akışı:",
+  "rows": [
+   [
+    "Isınma: Ben Hiç",
+    "Herkes açılsın, sırlar dökülsün",
+    "amber"
+   ],
+   [
+    "Gaz: Saatli Bomba",
+    "Kahkahalar en yükseğe çıksın",
+    "coral"
+   ],
+   [
+    "Final: Doğruluk mu Cesaret mi",
+    "Gecenin en cesur anları",
+    "lilac"
+   ]
+  ],
+  "cta": "Arkadaşını etiketle"
+ },
+ {
+  "id": "2026-12-05",
+  "accent": "mint",
+  "layout": "card",
+  "kicker": "Kankalarla",
+  "title": "Kankalığınız<br><em style='color:#7FD0BE'>sınavda.</em>",
+  "sub": "Arkadaşlığını test eden görevler. Bakalım kim gerçekten kanka?",
+  "tag": "Kanka görevi",
+  "q": "Kankanın telefonundan son mesajı sesli oku.",
+  "foot": "Yapamazsan ceza kartı çekersin",
+  "back1": "amber",
+  "back2": "coral",
+  "cta": "Kankanı etiketle"
+ },
+ {
+  "id": "2026-12-06",
+  "accent": "lilac",
+  "layout": "card",
+  "kicker": "Nostalji Treni",
+  "title": "Eski defterler<br><em style='color:#C9B6F0'>açılıyor.</em>",
+  "sub": "Eski hatıralar ve utandıran hikâyeler. Pazar akşamı için birebir.",
+  "tag": "Nostalji",
+  "q": "İlk aşkını anlat, ama ismini söylemeden.",
+  "foot": "Masadakiler tahmin etmeye çalışsın",
+  "back1": "sky",
+  "back2": "sage",
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-07",
+  "accent": "coral",
+  "layout": "card",
+  "kicker": "Kaos Modu",
+  "title": "Her şey<br><em style='color:#E07A6A'>karışınca.</em>",
+  "sub": "Doğruluk, cesaret, ceza; hepsi aynı çarkta. Sıradaki ne gelecek, kimse bilmiyor.",
+  "tag": "Kaos",
+  "q": "Sağındaki kişi senin yerine bir mesaj yazıp göndersin.",
+  "foot": "Geri adım yok",
+  "back1": "lilac",
+  "back2": "amber",
+  "chip": [
+   "Sürpriz çark",
+   "amber"
+  ],
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-08",
+  "accent": "sky",
+  "layout": "list",
+  "kicker": "Kendi Geceni Yarat",
+  "title": "Kurallar<br><em style='color:#A9D2F2'>senin.</em>",
+  "sub": "Kendi sorularını ve görevlerini ekle, sevdiğin modları karıştır.",
+  "rows": [
+   [
+    "Kendi görevini yaz",
+    "Sadece sizin grubun bildiği şakalar",
+    "sky"
+   ],
+   [
+    "Modları karıştır",
+    "Biraz Ben Hiç, biraz Kaos",
+    "amber"
+   ],
+   [
+    "Herkes bir kart eklesin",
+    "Grup olarak birlikte hazırlayın",
+    "sage"
+   ]
+  ],
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-09",
+  "accent": "amber",
+  "layout": "list",
+  "kicker": "Sen hangisisin?",
+  "title": "Hangi tip<br><em style='color:#E8A63E'>oyuncusun?</em>",
+  "sub": "Her grupta bu üçünden en az biri var:",
+  "rows": [
+   [
+    "Hep doğruluk seçen",
+    "Cesaret kartından kaçar",
+    "sky"
+   ],
+   [
+    "Cesaret delisi",
+    "Görev ne olursa olsun yapar",
+    "coral"
+   ],
+   [
+    "Pas geçen",
+    "Ceza kartlarının efsanesi",
+    "lilac"
+   ]
+  ],
+  "cta": "Yoruma 1, 2 ya da 3"
+ },
+ {
+  "id": "2026-12-10",
+  "accent": "coral",
+  "layout": "big",
+  "kicker": "Abonelik istemeyene",
+  "title": "Sevdiğin modu<br><em style='color:#E07A6A'>bir kere al.</em>",
+  "big": "1",
+  "bigtext": "kere öde,<br>mod hep senin.",
+  "rows": [
+   [
+    "Sadece istediğin modu aç",
+    "Örneğin sadece Sıcak Temas",
+    "coral"
+   ],
+   [
+    "Tek seferlik ödeme",
+    "Aylık ücret yok",
+    "amber"
+   ]
+  ],
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-11",
+  "accent": "coral",
+  "layout": "card",
+  "kicker": "Sevgiline sor",
+  "title": "Bu akşam<br><em style='color:#E07A6A'>ikiniz için.</em>",
+  "sub": "Çiftlere özel sorularla birbirinizi yeniden tanıyın.",
+  "tag": "Doğruluk",
+  "q": "Bana ilk ne zaman âşık olduğunu fark ettin?",
+  "foot": "Cevabını yorumda sevgiline sor",
+  "back1": "lilac",
+  "back2": "amber",
+  "cta": "Sevgilini etiketle"
+ },
+ {
+  "id": "2026-12-12",
+  "accent": "mint",
+  "layout": "big",
+  "kicker": "Geri sayım",
+  "title": "Yılbaşına<br><em style='color:#7FD0BE'>az kaldı.</em>",
+  "big": "19",
+  "bigtext": "gün.<br>Oyun listesi<br>hazır mı?",
+  "rows": [
+   [
+    "Grup kalabalıksa: Saatli Bomba",
+    "Herkes aynı anda oynar",
+    "mint"
+   ],
+   [
+    "Gece yarısından sonra: Kaos",
+    "Yeni yıla kahkahayla girin",
+    "coral"
+   ]
+  ],
+  "cta": "Şimdiden indir"
+ },
+ {
+  "id": "2026-12-13",
+  "accent": "sky",
+  "layout": "card",
+  "kicker": "Ben Hiç modu",
+  "title": "Dürüst ol,<br><em style='color:#A9D2F2'>kimse bakmıyor.</em>",
+  "sub": "Kart okunur, yapan elini kaldırır. Bu sefer kaç el kalkar?",
+  "tag": "Ben hiç...",
+  "q": "Ben hiç bir mesajı yanlış kişiye göndermedim.",
+  "foot": "Sen el kaldırır mıydın? Yoruma yaz",
+  "back1": "coral",
+  "back2": "sage",
+  "cta": "Linki biyoda"
+ },
+ {
+  "id": "2026-12-14",
+  "accent": "lilac",
+  "layout": "card",
+  "kicker": "Kim Daha Çok",
+  "title": "Herkes aynı<br><em style='color:#C9B6F0'>kişiyi gösterdi.</em>",
+  "sub": "Soru okunur, üç deyince herkes gösterir. En çok parmak kimde?",
+  "tag": "Kim daha çok",
+  "q": "Bu grupta kim “yoldayım” deyip daha evden çıkmamıştır?",
+  "foot": "O arkadaşını yorumda etiketle",
+  "back1": "mint",
+  "back2": "amber",
+  "cta": "Arkadaşını etiketle"
+ },
+ {
+  "id": "2026-12-15",
+  "accent": "amber",
+  "layout": "big",
+  "kicker": "Sadece bu gece için",
+  "title": "Günlük<br><em style='color:#E8A63E'>Eğlence.</em>",
+  "big": "24",
+  "bigtext": "saat boyunca<br>tüm modlar açık.",
+  "rows": [
+   [
+    "Tek seferlik",
+    "Abonelik yok, otomatik yenileme yok",
+    "amber"
+   ],
+   [
+    "Bütün geceyi kurtar",
+    "Misafir geldiğinde tam zamanı",
+    "sage"
+   ]
+  ],
+  "cta": "Linki biyoda"
+ }
+]
